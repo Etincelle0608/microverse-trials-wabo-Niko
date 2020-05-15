@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "nav-element content-element"
+    "nav-element foot-element";
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+        "nav-element "
+        "content-element"
+        "foot-element";
+        }
+}
+
+#navbar {
+    background-color: rgba(30, 144, 255, 0.35);
+    grid-area: nav-element;
+}
+
+main {
+    grid-area: content-element;
+}
+footer {
+    grid-area: foot-element;
+}
